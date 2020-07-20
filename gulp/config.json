@@ -1,0 +1,46 @@
+{
+  "APPLICATION_DIST_PATH": "./dist",
+  "APPLICATION_BROWSERSYNC_PORT": 3000,
+  "styles": {
+    "externalCssPaths": [
+      "./node_modules/sanitize.css/sanitize.css",
+      "./node_modules/@romger/react-flex-layout/lib/index.min.css",
+      "./node_modules/rc-datepicker/lib/style.css",
+      "./node_modules/@romger/react-modal-dialog/lib/index.css",
+      "./node_modules/@romger/react-attachments/lib/index.css",
+      "./node_modules/@romger/react-tooltip/lib/index.css",
+      "./node_modules/@romger/react-datepicker/lib/index.css",
+      "./node_modules/@romger/react-input/lib/index.min.css",
+      "./node_modules/@romger/react-select/lib/index.min.css",
+      "./node_modules/@romger/react-spinner/lib/index.css",
+      "./node_modules/@romger/react-table/lib/index.css"
+    ],
+    "mainStylesPaths": [
+      "./source/styles/common.scss"
+    ]
+  },
+  "js": {
+    "eslintPaths": [
+      "./source/**/*.js",
+      "./source/**/*.jsx"
+    ]
+  },
+  "ts": {
+    "tslintPaths": [
+      "./source/**/*.ts",
+      "./source/**/*.tsx",
+      "!./source/**/*.spec.ts",
+      "!./source/**/*.spec.tsx"
+    ],
+    "tsconfigPath": "./tsconfig.json"
+  },
+  "assets": {
+    "src": "./source/assets/**/*",
+    "dst": "./dist/assets",
+    "fromExternalModules": [
+      "./node_modules/@romger/react-attachments/lib/assets/**/*",
+      "./node_modules/@romger/react-global-module/lib/assets/**/*"
+    ]
+  },
+  "indexHtmlPath": "./source/index.html"
+}

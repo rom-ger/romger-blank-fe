@@ -1,0 +1,324 @@
+.main-wrap {
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  &__logo {
+    display: block;
+  }
+
+  &__left-panel {
+    flex-shrink: 0;
+    width: 64px;
+    padding: 14px 10px;
+    background-color: $left-panel-background;
+
+    &--settings-panel {
+      background-color: $primary;
+
+      .main-wrap__item-menu {
+        .material-icons {
+          color: $white !important;
+        }
+
+        .injected-svg {
+          fill: $white !important;
+        }
+      }
+
+      .main-wrap__item-menu:hover {
+        background-color: $settings-item-hover-bg;
+      }
+
+      .main-wrap__item-menu.main-wrap__item-menu--selected {
+        background-color: $settings-item-selected-bg;
+      }
+    }
+  }
+
+  &__content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__container {
+    width: 100%;
+    min-width: 500px;
+    height: 100%;
+  }
+
+  &__content-panel {
+    max-width: 1088px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+
+    &--full-width {
+      max-width: 100%;
+    }
+  }
+
+  &__left-child-panel {
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 24px 18px;
+    overflow-y: auto;
+    background: $blue;
+    -webkit-overflow-scrolling: touch;
+
+    &--settings-panel {
+      background-color: $graphite;
+
+      .main-wrap__item-child-menu:hover {
+        background-color: $settings-item-hover-bg;
+      }
+
+      .main-wrap__item-child-menu--selected {
+        background-color: $settings-item-selected-bg;
+      }
+    }
+
+    &--complaint-panel {
+      width: 360px;
+      min-width: 360px;
+      max-width: 360px;
+      padding: 0;
+    }
+
+    &--add-menu-panel {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 364px;
+      min-width: 364px;
+      height: 100vh;
+      overflow: visible;
+      background: $white;
+
+      .main-wrap__item-child-menu-main-title,
+      .main-wrap__item-child-menu {
+        color: $primary;
+      }
+
+      .main-wrap__item-child-menu--icon-wrap {
+        .material-icons,
+        svg {
+          fill: $project-icons-color;
+          color: $project-icons-color;
+        }
+      }
+
+      .main-wrap__item-child-menu:hover,
+      .main-wrap__item-child-menu--selected {
+        background: $project-panel-selected-item;
+      }
+
+      .main-wrap__item-child-menu--selected {
+        color: $link-color;
+      }
+
+      .main-wrap__item-child-menu--separate-line {
+        background: $link-color;
+
+        &:hover {
+          background: $link-color;
+        }
+      }
+    }
+
+    &--back {
+      position: absolute;
+      z-index: 1000;
+      top: 0;
+      left: 100%;
+      width: calc(100vw - 100%);
+      height: 100%;
+      opacity: 0.54;
+      background: $primary;
+      cursor: pointer;
+    }
+
+    &--project-panel {
+      background: $thin-gray;
+
+      .main-wrap__item-child-menu-main-title,
+      .main-wrap__item-child-menu {
+        color: $primary;
+      }
+
+      .main-wrap__item-child-menu--icon-wrap {
+        .material-icons,
+        svg {
+          fill: $project-icons-color;
+          color: $project-icons-color;
+        }
+      }
+
+      .main-wrap__item-child-menu:hover,
+      .main-wrap__item-child-menu--selected {
+        background: $project-panel-selected-item;
+      }
+
+      .main-wrap__item-child-menu--selected {
+        color: $link-color;
+      }
+
+      .main-wrap__item-child-menu--separate-line {
+        background: $link-color;
+
+        &:hover {
+          background: $link-color;
+        }
+      }
+    }
+  }
+
+  &__item-child-menu-sub-title {
+    margin: 16px 0 4px 12px;
+    padding-right: 12px;
+    color: $white;
+    font-size: 13.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__item-child-menu-main-title {
+    margin-bottom: 20px;
+    margin-left: 12px;
+    padding-right: 12px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__wrap-item-child-menu {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__item-child-menu {
+    padding: 8px 12px;
+    border-radius: 3px 0 0 3px;
+    color: $white;
+    font-size: 15px;
+    cursor: pointer;
+
+    &--icon-wrap {
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      margin-right: 16px;
+      border-radius: 3px;
+
+      .material-icons,
+      svg {
+        fill: $white;
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background: $item-child-hover-bg;
+    }
+
+    &--selected {
+      background: $item-child-selected-bg;
+    }
+
+    &--separate-line {
+      height: 1px;
+      margin: 8px 12px;
+      padding: 0;
+      opacity: 0.36;
+      background: $white;
+      cursor: default;
+
+      &:hover {
+        background: $white;
+      }
+    }
+  }
+
+  &__name-wrap {
+    font-size: 18px;
+  }
+
+  &__main-logo {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    cursor: pointer;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__item-menu {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    fill: $item-color !important;
+    color: $item-color !important;
+    cursor: pointer;
+
+    i,
+    svg {
+      fill: $item-color !important;
+      color: $item-color !important;
+    }
+
+    &--selected {
+      background: $item-select-background;
+      fill: $white !important;
+      color: $white !important;
+
+      i,
+      svg {
+        fill: $white !important;
+        color: $white !important;
+      }
+    }
+
+    &--simple {
+      margin: 0;
+      background: none;
+      fill: $white !important;
+      color: $white !important;
+
+      i,
+      svg {
+        fill: $white !important;
+        color: $white !important;
+      }
+
+      &.main-wrap__item-menu--selected {
+        background: $item-select-background;
+      }
+    }
+
+    &:hover {
+      background-color: $item-hover-bg;
+    }
+  }
+
+  &__notify-circle {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $white;
+    border-radius: 11px;
+    background-color: $warning;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

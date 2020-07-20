@@ -1,0 +1,48 @@
+.button-wrap {
+  @extend %button-template;
+  @extend %label-4--white;
+
+  background: $link;
+
+  &:hover {
+    background: $link-hover;
+  }
+
+  &--disabled {
+    background: $secondary;
+    cursor: default;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+
+  &--default {
+    @extend %label-4--link;
+
+    padding: 0;
+    background: none;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  &--warning {
+    background: $warning;
+
+    &:hover {
+      background: $warning;
+    }
+  }
+}
+
+.thin-gray-button {
+  @extend %button-template;
+
+  background-color: $thin-gray;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}

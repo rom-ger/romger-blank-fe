@@ -1,0 +1,105 @@
+.auth-wrap {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background: $blue;
+  -webkit-overflow-scrolling: touch;
+
+  &__content {
+    flex: 1;
+    width: 100%;
+
+    &--sign-in {
+      min-height: 480px;
+    }
+
+    &--sign-up {
+      min-height: 720px;
+    }
+  }
+
+  &__card {
+    padding: 48px;
+    border-radius: 3px;
+    background-color: $white;
+
+    &--sign-in {
+      width: 400px;
+    }
+
+    &--sign-up {
+      width: 600px;
+      padding: 32px 48px;
+    }
+  }
+
+  &__card-title {
+    margin-bottom: 38px;
+    text-align: center;
+  }
+
+  &__error {
+    margin: 0 0 9px;
+    color: $warning !important;
+  }
+
+  &__action {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    background: $link-color;
+    cursor: pointer;
+
+    &--secondary {
+      height: auto;
+      margin: 44px 0 0;
+      padding: 4px;
+      background: none;
+    }
+
+    &--disabled {
+      background: $label-color;
+      cursor: default;
+    }
+
+    &--last-child {
+      margin: 0;
+    }
+  }
+
+  &__card-registration-button {
+    cursor: pointer;
+  }
+
+  &__card-row-input-label {
+    width: 128px;
+    padding: 8px 14px 0 0;
+  }
+
+  .input-block {
+    flex: 1;
+  }
+
+  &__card-row {
+    width: 100%;
+
+    &--padding {
+      padding-left: 128px;
+    }
+  }
+
+  &__card-row-checkbox {
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+
+  &__card-row-checkbox-text {
+    margin-left: 16px;
+
+    &--link-color {
+      margin-left: 0;
+      color: $link-color;
+    }
+  }
+}

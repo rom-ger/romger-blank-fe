@@ -1,0 +1,1 @@
+var RG_GLOBAL_IP = null;

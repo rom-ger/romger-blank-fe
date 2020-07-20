@@ -1,0 +1,170 @@
+body {
+  .input-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &__text-overflow {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__fields-error {
+      position: absolute;
+      bottom: -17px;
+      width: 100%;
+      height: 12px;
+      padding-left: 14px;
+      color: $warning !important;
+      font-size: 12px !important;
+    }
+
+    &__max-size {
+      margin-left: 5px;
+      white-space: nowrap;
+    }
+
+    &__label {
+      min-height: 20px;
+      margin-bottom: 5px;
+      padding-left: 14px;
+      color: $label-color !important;
+      font-size: 14px !important;
+
+      &--left {
+        margin-right: 8px;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+    }
+
+    input,
+    textarea {
+      @extend %body-2--primary;
+      box-sizing: border-box;
+
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid $light-gray;
+      border-bottom: 2px solid $light-gray;
+      border-radius: 4px;
+      outline: none !important;
+      background: none;
+      box-shadow: none !important;
+
+      &.placeholder {
+        @extend %body-2--placeholder;
+
+        color: $placeholder !important;
+      }
+
+      &:-moz-placeholder {
+        color: $placeholder !important;
+      }
+
+      &::-moz-placeholder {
+        color: $placeholder !important;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $placeholder !important;
+      }
+
+      &:-ms-input-placeholder {
+        color: $placeholder !important;
+      }
+
+      &[disabled] {
+        &.placeholder {
+          @extend %body-2--placeholder;
+
+          color: $placeholder !important;
+        }
+
+        &:-moz-placeholder {
+          color: $placeholder !important;
+        }
+
+        &::-moz-placeholder {
+          color: $placeholder !important;
+        }
+
+        &::-webkit-input-placeholder {
+          color: $placeholder !important;
+        }
+
+        &:-ms-input-placeholder {
+          color: $placeholder !important;
+        }
+      }
+
+      &:focus {
+        border-bottom: 2px solid $link-color;
+      }
+
+      &.form-control {
+        &[disabled] {
+          background: #eceff1;
+          cursor: default;
+        }
+      }
+    }
+
+    textarea {
+      min-height: 72px;
+      padding: 10px 12px !important;
+      resize: vertical;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    &--with-icon {
+      input {
+        padding-right: 32px !important;
+      }
+    }
+
+    &--error {
+      .input-block__label {
+        color: $warning !important;
+      }
+
+      input,
+      textarea {
+        border-bottom: 2px solid $warning !important;
+
+        &:focus {
+          border-bottom: 2px solid $warning !important;
+        }
+
+        &.placeholder {
+          color: $warning !important;
+        }
+
+        &:-moz-placeholder {
+          color: $warning !important;
+        }
+
+        &::-moz-placeholder {
+          color: $warning !important;
+        }
+
+        &::-webkit-input-placeholder {
+          color: $warning !important;
+        }
+
+        &:-ms-input-placeholder {
+          color: $warning !important;
+        }
+      }
+    }
+  }
+}

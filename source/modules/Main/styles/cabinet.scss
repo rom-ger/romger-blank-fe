@@ -1,0 +1,62 @@
+.cabinet-wrapper {
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cabinet {
+
+  &__top-panel {
+    background-color: $graphite;
+  }
+  
+  &__top-panel-content {
+    height: 54px;
+  }
+
+  &__top-panel-link {
+    margin-right: 45px;
+    font-family: 'SanFranciscoSemibold' !important;
+    font-size: 16px !important;
+    color: $white !important;
+  }
+
+  &__top-panel-link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &__header {
+    height: 500px;
+    background: $thin-gray url('assets/images/header-private-background.png') no-repeat center center;
+  }
+
+  &__header-content {
+    max-width: 640px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  &__main-title,
+  &__header-description {
+    text-align: center;
+  }
+
+  &__main-title {
+    @extend %title;
+    margin-bottom: 48px;
+    color: $primary;
+    font-size: 48px;
+  }
+
+  &__header-buttons-wrapper {
+    width: 532px;
+    margin-top: auto;
+  }
+}

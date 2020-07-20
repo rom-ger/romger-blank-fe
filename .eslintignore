@@ -1,0 +1,10 @@
+gulpfile.babel.js
+webpack.config.js
+node_modules/**/*.*
+assets/**/*.*
+*.min.js
+*.ts
+*.tsx
+gulp/**/*
+.babelrc
+config.js

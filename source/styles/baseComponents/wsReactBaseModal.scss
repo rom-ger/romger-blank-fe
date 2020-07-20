@@ -1,0 +1,86 @@
+body {
+  .rg-react-base-modal {
+    @extend %body-2--primary;
+
+    .dictionary-list__button {
+      margin: 0;
+    }
+
+    .rg-react-checkbox--title {
+      margin-left: 15px;
+    }
+  }
+    
+  .rg-react-base-modal__modal {
+    border-radius: 4px;
+  }
+
+  .rg-react-base-modal__modal-title {
+    align-items: flex-start !important;
+    height: auto;
+    min-height: 83px;
+    padding: 24px;
+    background: $white;
+    color: $primary;
+    font-size: 25px;
+
+    .modal-icon {
+      width: 26px !important;
+      min-width: 26px !important;
+      height: 26px !important;
+      min-height: 26px !important;
+      color: $primary !important;
+      fill: $primary !important;
+    }
+  }
+
+  .rg-react-base-modal__content-wrap {
+    padding: 0 24px;
+  }
+
+  .rg-react-base-modal__input-label {
+    flex-shrink: 0;
+    min-width: 120px;
+    padding: 8px 14px 0 0;
+  }
+
+  .rg-react-base-modal__single-input-wrapper {
+    margin-bottom: 24px;
+    padding-left: 120px;
+  }
+
+  .rg-react-base-modal__button-wrap {
+    justify-content: space-between !important;
+    height: 72px;
+    min-height: 72px;
+    padding: 0 24px;
+    border: 0;
+    background-color: $thin-gray;
+  }
+
+  .rg-react-base-modal__button {
+    @extend %label-4;
+    height: 36px;
+    min-height: 36px;
+    margin: 0;
+    padding: 0 20px;
+    background-color: $link;
+    color: $white;
+    line-height: 36px;
+
+    &:last-of-type {
+      margin-right: 0 !important;
+    }
+  }
+
+  .rg-react-base-modal__button.rg-react-base-modal__button--default {
+    padding: 0;
+    background-color: $thin-gray;
+    color: $link;
+  }
+
+  .rg-react-base-modal__button--disabled {
+    background-color: $thin-gray;
+    color: $primary;
+  }
+}

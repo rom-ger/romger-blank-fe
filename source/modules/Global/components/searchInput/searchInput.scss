@@ -1,0 +1,36 @@
+.search-input {
+  position: relative;  
+
+  .input-block {
+    margin-bottom: 0;  
+  }
+
+  input {
+    padding: 0 32px 0 36px !important;  
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 57%;
+    right: 14px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    i {
+      color: $primary;  
+      font-size: 18px;
+    }
+  }
+
+  &__find-icon {
+    position: absolute;
+    top: 57%;
+    left: 8px;
+    transform: translateY(-50%);
+
+    i {
+      color: $primary;  
+      font-size: 24px;
+    }
+  }
+}
