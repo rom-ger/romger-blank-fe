@@ -35,7 +35,7 @@
     "@romger/react-spinner": "1.0.0",
     "@romger/react-table": "1.0.1",
     "@romger/react-tooltip": "1.0.0",
-    "axios": "0.18.0",
+    "axios": "0.18.1",
     "babel-cli": "6.26.0",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
