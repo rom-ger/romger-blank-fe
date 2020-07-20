@@ -154,7 +154,7 @@
       }
     },
     "verbose": true,
-    "collectCoverage": false,
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "source/**/*.{ts,tsx}",
       "!source/**/*.spec.{ts,tsx}",
