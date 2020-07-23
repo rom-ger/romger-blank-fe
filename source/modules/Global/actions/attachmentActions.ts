@@ -1,6 +1,6 @@
 import { RgReactBaseService } from '@romger/react-base-components';
 import ContentDescriptor, { ContentDescriptorDTO } from '../models/contentDescriptorModel';
-import { globalConfig } from './../../../config/globalConfig';
+import { globalConfig } from '../../../config/globalConfig';
 import { BaseActions } from './baseActions';
 
 export class AttachmentsActions extends BaseActions {

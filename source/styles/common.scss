@@ -1,6 +1,7 @@
 @import './base/variables.scss';
-@import './fonts.scss';
-@import './mixins.scss';
+@import './base/wsColorMap.scss';
+@import './base/wsFontMap.scss';
+@import './base/mixins';
 @import './global.scss';
 @import './baseComponents/**/*.scss';
 @import '../modules/**/*.scss';

@@ -23,7 +23,7 @@
     "rules": {
         "indent": ["error", 4],
         "max-len": ["error", 1000],
-        "import/no-unresolved": false,
+        "import/no-unresolved": 1,
         "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 1 }],
         "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
         "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],

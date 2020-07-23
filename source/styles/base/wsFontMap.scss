@@ -1,0 +1,647 @@
+@import 'fontFaces.scss';
+@import 'variables.scss';
+@import 'wsColorMap.scss';
+@import 'mixins.scss';
+
+%ws-san-francisco-text-bold {
+  font-family: 'sanFranciscoTextBold', sans-serif !important;
+}
+
+/* *** PAGE-TITLE-1 *** */
+%ws-page-title-1 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextBold', sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+
+  @include maxWidth(768) {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @include maxWidth(375) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.ws-page-title-1-primary {
+  @extend %ws-page-title-1;
+}
+
+.ws-page-title-1-secondary {
+  @extend %ws-page-title-1;
+
+  color: $pb500;
+}
+
+.ws-page-title-1-white {
+  @extend %ws-page-title-1;
+
+  color: $bs000;
+}
+
+/* *** PAGE-TITLE-2 *** */
+%ws-page-title-2 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextBold', sans-serif;
+  font-size: 52px;
+
+  @include maxWidth(768) {
+    font-size: 43px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 38px;
+  }
+
+  @include maxWidth(375) {
+    font-size: 36px;
+  }
+}
+
+.ws-page-title-2-primary {
+  @extend %ws-page-title-2;
+}
+
+.ws-page-title-2-secondary {
+  @extend %ws-page-title-2;
+
+  color: $pb500;
+}
+
+.ws-page-title-2-white {
+  @extend %ws-page-title-2;
+
+  color: $bs000;
+}
+
+/* *** PAGE-HEADER *** */
+%ws-page-header {
+  color: $bs750;
+  font-family: 'sanFranciscoTextRegular', sans-serif;
+  font-size: 40px;
+
+  @include maxWidth(768) {
+    font-size: 31px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 26px;
+  }
+
+  @include maxWidth(375) {
+    font-size: 24px;
+  }
+}
+
+.ws-page-header-primary {
+  @extend %ws-page-header;
+}
+
+.ws-page-header-primary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-page-header-secondary {
+  @extend %ws-page-header;
+
+  color: $pb500;
+}
+
+.ws-page-header-secondary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-page-header-white {
+  @extend %ws-page-header;
+
+  color: $bs000;
+}
+
+.ws-page-header-white--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+/* *** SUBHEADER-1 *** */
+%ws-subheader-1 {
+  color: $bs750;
+  font-family: 'robotoSlabBold', sans-serif;
+  font-size: 16px;
+
+  @include maxWidth(768) {
+    font-size: 15px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 14px;
+  }
+}
+
+.ws-subheader-1-primary {
+  @extend %ws-subheader-1;
+}
+
+.ws-subheader-1-secondary {
+  @extend %ws-subheader-1;
+
+  color: $pb500;
+}
+
+.ws-subheader-1-white {
+  @extend %ws-subheader-1;
+
+  color: $bs000;
+}
+
+/* *** SUBHEADER-2 *** */
+%ws-subheader-2 {
+  color: $bs750;
+  font-family: 'robotoSlabBold', sans-serif;
+  font-size: 22px;
+
+  @include maxWidth(768) {
+    font-size: 20px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 18px;
+  }
+}
+
+.ws-subheader-2-primary {
+  @extend %ws-subheader-2;
+}
+
+.ws-subheader-2-secondary {
+  @extend %ws-subheader-2;
+
+  color: $pb500;
+}
+
+.ws-subheader-2-white {
+  @extend %ws-subheader-2;
+
+  color: $bs000;
+}
+
+/* *** SUBHEADER-3 *** */
+%ws-subheader-3 {
+  color: $bs750;
+  font-family: 'robotoSlabBold', sans-serif;
+  font-size: 28px;
+
+  @include maxWidth(768) {
+    font-size: 24px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 21px;
+  }
+
+  @include maxWidth(375) {
+    font-size: 20px;
+  }
+}
+
+.ws-subheader-3-primary {
+  @extend %ws-subheader-3;
+}
+
+.ws-subheader-3-secondary {
+  @extend %ws-subheader-3;
+
+  color: $pb500;
+}
+
+.ws-subheader-3-white {
+  @extend %ws-subheader-3;
+
+  color: $bs000;
+}
+
+/* *** SUBHEADER-4 *** */
+%ws-subheader-4 {
+  color: $bs750;
+  font-family: 'robotoSlabBold', sans-serif;
+  font-size: 36px;
+
+  @include maxWidth(768) {
+    font-size: 30px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 26px;
+  }
+
+  @include maxWidth(375) {
+    font-size: 24px;
+  }
+}
+
+.ws-subheader-4-primary {
+  @extend %ws-subheader-4;
+}
+
+.ws-subheader-4-secondary {
+  @extend %ws-subheader-4;
+
+  color: $pb500;
+}
+
+.ws-subheader-4-white {
+  @extend %ws-subheader-4;
+
+  color: $bs000;
+}
+
+/* *** BODY-1 *** */
+%ws-body-1 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextRegular', sans-serif;
+  font-size: 15px;
+
+  @include maxWidth(768) {
+    font-size: 14px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 13px;
+  }
+}
+
+.ws-body-1-primary {
+  @extend %ws-body-1;
+}
+
+.ws-body-1-primary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-1-secondary {
+  @extend %ws-body-1;
+
+  color: $pb500;
+}
+
+.ws-body-1-secondary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-1-white {
+  @extend %ws-body-1;
+
+  color: $bs000;
+}
+
+.ws-body-1-white--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+// Old - body-1-link
+.ws-body-1-link {
+  @extend %ws-body-1;
+
+  color: $de500;
+}
+
+.ws-body-1-link--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+/* *** BODY-2 *** */
+%ws-body-2 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextRegular', sans-serif;
+  font-size: 16px;
+
+  @include maxWidth(768) {
+    font-size: 15px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 14px;
+  }
+}
+
+.ws-body-2-primary {
+  @extend %ws-body-2;
+}
+
+.ws-body-2-primary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-2-secondary {
+  @extend %ws-body-2;
+
+  color: $pb500;
+}
+
+.ws-body-2-secondary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-2-white {
+  @extend %ws-body-2;
+
+  color: $bs000;
+}
+
+.ws-body-2-white--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+// Old body-2-link
+.ws-body-2-link {
+  @extend %ws-body-2;
+
+  color: $de500;
+}
+
+.ws-body-2-link--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+/* *** BODY-3 *** */
+%ws-body-3 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextRegular', sans-serif;
+  font-size: 18px;
+
+  @include maxWidth(768) {
+    font-size: 16px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 15px;
+  }
+}
+
+.ws-body-3-primary {
+  @extend %ws-body-3;
+}
+
+.ws-body-3-primary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-3-secondary {
+  @extend %ws-body-3;
+
+  color: $pb500;
+}
+
+.ws-body-3-secondary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-3-white {
+  @extend %ws-body-3;
+
+  color: $bs000;
+}
+
+.ws-body-3-white--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+// Old - body-3-link
+.ws-body-3-link {
+  @extend %ws-body-3;
+
+  color: $de500;
+}
+
+.ws-body-3-link--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+/* *** BODY-4 *** */
+%ws-body-4 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextRegular', sans-serif;
+  font-size: 24px;
+
+  @include maxWidth(768) {
+    font-size: 22px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 20px;
+  }
+}
+
+.ws-body-4-primary {
+  @extend %ws-body-4;
+}
+
+.ws-body-4-primary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-4-secondary {
+  @extend %ws-body-4;
+
+  color: $pb500;
+}
+
+.ws-body-4-secondary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-body-4-white {
+  @extend %ws-body-4;
+
+  color: $bs000;
+}
+
+.ws-body-4-white--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+// Old - body-4-link
+.ws-body-4-link {
+  @extend %ws-body-4;
+
+  color: $de500;
+}
+
+.ws-body-4-link--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+/* *** LABEL-1 *** */
+%ws-label-1 {
+  background-color: inherit;
+  color: $bs750;
+  font-family: 'sourceSansProBold', sans-serif;
+  font-size: 14px;
+
+  @include maxWidth(768) {
+    font-size: 13px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 12px;
+  }
+}
+
+// Old - label-primary
+.ws-label-1-primary {
+  @extend %ws-label-1;
+}
+
+// Old - label-secondary
+.ws-label-1-secondary {
+  @extend %ws-label-1;
+
+  color: $pb500;
+}
+
+// Old - label-white
+.ws-label-1-white {
+  @extend %ws-label-1;
+
+  color: $bs000;
+}
+
+/* *** CAPTION-1 *** */
+%ws-caption-1 {
+  color: $bs750;
+  font-family: 'sanFranciscoTextRegular', sans-serif;
+  font-size: 13px;
+
+  @include maxWidth(768) {
+    font-size: 12px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 11px;
+  }
+}
+
+// Old - caption-primary
+.ws-caption-1-primary {
+  @extend %ws-caption-1;
+}
+
+.ws-caption-1-primary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+// Old - caption-secondary
+.ws-caption-1-secondary {
+  @extend %ws-caption-1;
+
+  color: $pb500;
+}
+
+.ws-caption-1-secondary--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+// Old - caption-white
+.ws-caption-1-white {
+  @extend %ws-caption-1;
+
+  color: $bs000;
+}
+
+.ws-caption-1-white--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+.ws-caption-1-link {
+  @extend %ws-caption-1;
+
+  color: $de500;
+}
+
+.ws-caption-1-link--bold {
+  @extend %ws-san-francisco-text-bold;
+}
+
+%ws-action-1 {
+  color: $bs750;
+  font-family: 'sourceSansProBold', sans-serif;
+  font-size: 16px;
+
+  @include maxWidth(768) {
+    font-size: 15px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 14px;
+  }
+}
+
+.ws-action-1-primary {
+  @extend %ws-action-1;
+}
+
+.ws-action-1-secondary {
+  @extend %ws-action-1;
+
+  color: $pb500;
+}
+
+.ws-action-1-white {
+  @extend %ws-action-1;
+
+  color: $bs000;
+}
+
+.ws-action-1-action-secondary {
+  @extend %ws-action-1;
+
+  color: $cb200;
+}
+
+// Old - action-1-link
+.ws-action-1-link {
+  @extend %ws-action-1;
+
+  color: $de500;
+}
+
+%ws-action-2 {
+  color: $bs750;
+  font-family: 'sourceSansProBold', sans-serif;
+  font-size: 18px;
+
+  @include maxWidth(768) {
+    font-size: 16px;
+  }
+
+  @include maxWidth(480) {
+    font-size: 15px;
+  }
+}
+
+.ws-action-2-primary {
+  @extend %ws-action-2;
+}
+
+.ws-action-2-secondary {
+  @extend %ws-action-2;
+
+  color: $pb500;
+}
+
+.ws-action-2-white {
+  @extend %ws-action-2;
+
+  color: $bs000;
+}
+
+.ws-action-2-link {
+  @extend %ws-action-2;
+
+  color: $de500;
+}

@@ -10,6 +10,7 @@ import { extStyle, sass } from './gulp/tasks/style';
 import { watch } from './gulp/tasks/watch';
 import { generateAppConfig } from './gulp/utils/appConfig';
 import { browserSyncInit } from './gulp/utils/browserSync';
+
 var jest = require('gulp-jest').default;
 
 gulp.task('serve',

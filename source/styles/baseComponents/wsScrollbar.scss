@@ -1,4 +1,4 @@
-.rg-scrollbar {
+.ws-scrollbar {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -6,7 +6,7 @@
   /* total width */
   &::-webkit-scrollbar {
     width: 6px;
-    background-color: $primary-color;
+    background-color: $bs750;
   }
 
   /* set button(top and bottom of the scrollbar) */
@@ -16,22 +16,22 @@
 
   /* background of the scrollbar except button or resizer */
   &::-webkit-scrollbar-track {
-    background-color: $white;
+    background-color: $bs000;
   }
 
   /* scrollbar itself */
   &::-webkit-scrollbar-thumb {
     border: 0;
     border-radius: 16px;
-    background-color: $placeholder;
+    background-color: $bc090;
   }
 
   &::-webkit-scrollbar-track:hover {
-    background-color: $white;
+    background-color: $bs000;
   }
 
   &::-webkit-scrollbar-thumb:hover {
     border: 0;
-    background-color: $placeholder;
+    background-color: $bc090;
   }
 }

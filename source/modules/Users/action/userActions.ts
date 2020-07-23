@@ -1,8 +1,8 @@
 import { RgReactBaseService } from '@romger/react-base-components';
+import { CollectionDTOInterface } from '@romger/react-global-module/lib/interfaces';
 import { api } from '../../../config/api';
 import { globalConfig } from '../../../config/globalConfig';
 import { BaseActions } from '../../Global/actions/baseActions';
-import { CollectionDTOInterface } from '../../Global/interfaces/collectionDTO';
 import { IUserCreateParams } from '../interface/IUserCreateParams';
 import { IUserEditParams } from '../interface/IUserEditParams';
 import { IUserListParams } from '../interface/IUserListParams';

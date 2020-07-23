@@ -1,13 +1,13 @@
 import { RgReactBaseComponentInterface, RgReactBaseContainer } from '@romger/react-base-components';
+import { GlobalStore } from '@romger/react-global-module/lib/store';
 import { RgReactSpinner } from '@romger/react-spinner';
-import { isEqual } from 'lodash';
+import isEqual from 'lodash.isequal';
 import { inject, observer } from 'mobx-react';
 import * as React from 'react';
 // import 'react-confirm-alert/src/react-confirm-alert.css';
 import { Redirect } from 'react-router-dom';
 import { ToastContainer, ToastPosition } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GlobalStore } from '../../Global/store/globalStore';
 
 interface MainWrapProps {
     children: any;

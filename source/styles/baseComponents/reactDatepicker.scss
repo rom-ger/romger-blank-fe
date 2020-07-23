@@ -4,16 +4,17 @@ body {
   }
 
   .react-datepicker-component.base-date-picker__input {
-    @extend %body-2--primary;
-    box-sizing: border-box !important;
+    @extend %ws-body-2;
 
+    box-sizing: border-box !important;
     height: 40px !important;
-    border: 1px solid $light-gray !important;
-    border-bottom: 2px solid $light-gray !important;
+    border: 1px solid $bs010 !important;
+    border-bottom: 2px solid $bs010 !important;
     border-radius: 4px !important;
     outline: none !important;
     background: none !important;
     box-shadow: none !important;
+    color: $bs750;
 
     &:hover {
       .react-datepicker-input {
@@ -22,12 +23,8 @@ body {
     }
   }
 
-  .base-date-picker .is-disabled input {
-    background: #eceff1 !important;
-  }
-
   .react-datepicker-input input {
-    @extend %body-2--primary;
+    @extend %ws-body-2;
 
     width: 100% !important;
     height: 40px !important;
@@ -36,28 +33,31 @@ body {
     border-bottom: 2px solid transparent !important;
     outline: none !important;
     background-color: transparent !important;
+    color: $bs750;
 
     &.placeholder {
-      @extend %body-2--placeholder;
-
-      color: $placeholder !important;
+      color: $bc090 !important;
     }
 
     &:-moz-placeholder {
-      color: $placeholder !important;
+      color: $bc090 !important;
     }
 
     &::-moz-placeholder {
-      color: $placeholder !important;
+      color: $bc090 !important;
     }
 
     &::-webkit-input-placeholder {
-      color: $placeholder !important;
+      color: $bc090 !important;
     }
 
     &:-ms-input-placeholder {
-      color: $placeholder !important;
+      color: $bc090 !important;
     }
+  }
+
+  .base-date-picker .is-disabled input {
+    background: #eceff1 !important;
   }
 
   .base-date-picker__label {
@@ -65,7 +65,7 @@ body {
     margin-bottom: 5px;
     padding-left: 14px;
     overflow: hidden;
-    color: $label-color !important;
+    color: $bc090 !important;
     font-size: 14px !important;
     text-overflow: ellipsis;
     white-space: nowrap;

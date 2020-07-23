@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'sanFranciscoTextRegular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('assets/fonts/SFUIText-Regular.eot');
+  src: url('assets/fonts/SFUIText-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/SFUIText-Regular.woff2') format('woff2'), url('assets/fonts/SFUIText-Regular.woff') format('woff'), url('assets/fonts/SFUIText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sanFranciscoTextBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('assets/fonts/SFUIText-Bold.eot');
+  src: url('assets/fonts/SFUIText-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/SFUIText-Bold.woff2') format('woff2'), url('assets/fonts/SFUIText-Bold.woff') format('woff'), url('assets/fonts/SFUIText-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'robotoSlabBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('assets/fonts/robotoslab-bold-webfont.eot');
+  src: url('assets/fonts/robotoslab-bold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/robotoslab-bold-webfont.woff2') format('woff2'), url('assets/fonts/robotoslab-bold-webfont.woff') format('woff'), url('assets/fonts/robotoslab-bold-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sourceSansProBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('assets/fonts/SourceSansPro-Bold.eot');
+  src: url('assets/fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/SourceSansPro-Bold.woff2') format('woff2'), url('assets/fonts/SourceSansPro-Bold.woff') format('woff'), url('assets/fonts/SourceSansPro-Bold.ttf') format('truetype');
+}

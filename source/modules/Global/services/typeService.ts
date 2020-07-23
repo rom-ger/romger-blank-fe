@@ -1,8 +1,7 @@
+import { CollectionDTOInterface } from '@romger/react-global-module/lib/interfaces';
 import * as t from 'io-ts';
-import { CollectionDTOInterface } from '../interfaces/collectionDTO';
 
 class TypeService {
-
     /**
      * Создания типа enum для io-ts
      */
@@ -52,7 +51,7 @@ class TypeService {
     static checkElementsCollection<T>(entityType: any, entityClass: any, entityName: string, collection: CollectionDTOInterface<any>): CollectionDTOInterface<T> {
         return {
             items: collection.items.map((item: any) => TypeService.checkElement<T>(entityType, entityClass, entityName, item))
-                                   .filter((el: T | null): el is T => !!el),
+                .filter((el: T | null): el is T => !!el),
             totalCount: collection.totalCount,
         };
     }
@@ -62,7 +61,7 @@ class TypeService {
      */
     static checkElementsArray<T>(entityType: any, entityClass: any, entityName: string, array: any[]): T[] {
         return array.map((item: any) => TypeService.checkElement<T>(entityType, entityClass, entityName, item))
-                    .filter((el: T | null): el is T => !!el);
+            .filter((el: T | null): el is T => !!el);
     }
 }
 

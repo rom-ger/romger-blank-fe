@@ -1,13 +1,12 @@
 import { RgReactBaseComponent, RgReactBaseComponentInterface, RgReactBaseService } from '@romger/react-base-components';
+import { PaginationInterface, SimpleObjectInterface } from '@romger/react-global-module/lib/interfaces';
+import { GlobalStore } from '@romger/react-global-module/lib/store';
 import { inject, observer } from 'mobx-react';
 import { toast } from 'react-toastify';
 import { globalConfig } from '../../../../config/globalConfig';
 import { AuthService } from '../../../Auth/services/authServices';
 import BASE_STATUS from '../../../Global/enums/baseStatus';
 import { BreadCrumbsItems } from '../../../Global/interfaces/breadCrumbsItems';
-import { PaginationInterface } from '../../../Global/interfaces/pagination';
-import { SimpleObjectInterface } from '../../../Global/interfaces/simpleObject';
-import { GlobalStore } from '../../../Global/store/globalStore';
 import * as userActions from '../../action/userActions';
 import { IUserListParams } from '../../interface/IUserListParams';
 import { User } from '../../model/user';
@@ -19,6 +18,7 @@ interface UserListProps {
 
 interface UserListState {
     [index: string]: any;
+
     items: User[];
     status: SimpleObjectInterface | null;
     searchString: string | null;
@@ -34,15 +34,25 @@ export interface IUserList extends RgReactBaseComponentInterface {
     state: UserListState;
     props: UserListProps;
     checkChangeSimple: (value: string) => boolean;
+
     activateItem(id: string): void;
+
     closeCreateModal(update: boolean): void;
+
     openModalCreate(): void;
+
     closeEditModal(update: boolean): void;
+
     openModalEdit(user: User): void;
+
     closeEditPasswordModal(update: boolean): void;
+
     openModalEditPassword(user: User): void;
+
     deactivateItem(id: string): void;
+
     clearFilter(): void;
+
     changeFilters(changeStateObject: any): void;
 }
 
@@ -79,7 +89,7 @@ export default class UserList extends RgReactBaseComponent<UserListProps, UserLi
      */
     checkChangeSimple = (value: string): boolean => {
         return value !== '111';
-    }
+    };
 
     /**
      * Обновляем хлебные крошки
@@ -148,10 +158,13 @@ export default class UserList extends RgReactBaseComponent<UserListProps, UserLi
      * Очистить фильтр
      */
     clearFilter() {
-        this.setState({
-            searchString: null,
-            status: BASE_STATUS.ACTIVE,
-        },            () => this.updateContent(true));
+        this.setState(
+            {
+                searchString: null,
+                status: BASE_STATUS.ACTIVE,
+            },
+            () => this.updateContent(true),
+        );
     }
 
     /**
@@ -161,16 +174,19 @@ export default class UserList extends RgReactBaseComponent<UserListProps, UserLi
         this.setState({
             showCreateModal: true,
         });
-    }
+    };
 
     /**
      * Закрыть модалку создания пользователя
      * @param update
      */
     closeCreateModal(update: boolean): void {
-        this.setState({
-            showCreateModal: false,
-        },            () => update ? this.updateContent(true) : null);
+        this.setState(
+            {
+                showCreateModal: false,
+            },
+            () => update ? this.updateContent(true) : null,
+        );
     }
 
     /**
@@ -181,17 +197,20 @@ export default class UserList extends RgReactBaseComponent<UserListProps, UserLi
             showEditModal: true,
             editItem: user,
         });
-    }
+    };
 
     /**
      * Закрыть модалку редактирования роли пользователя
      * @param update
      */
     closeEditModal(update: boolean): void {
-        this.setState({
-            showEditModal: false,
-            editItem: null,
-        },            () => update ? this.updateContent() : null);
+        this.setState(
+            {
+                showEditModal: false,
+                editItem: null,
+            },
+            () => update ? this.updateContent() : null,
+        );
     }
 
     /**
@@ -202,17 +221,20 @@ export default class UserList extends RgReactBaseComponent<UserListProps, UserLi
             showEditPasswordModal: true,
             editItem: user,
         });
-    }
+    };
 
     /**
      * Закрыть модалку редактирования пароля пользователя
      * @param update
      */
     closeEditPasswordModal(update: boolean): void {
-        this.setState({
-            showEditPasswordModal: false,
-            editItem: null,
-        },            () => update ? this.updateContent() : null);
+        this.setState(
+            {
+                showEditPasswordModal: false,
+                editItem: null,
+            },
+            () => update ? this.updateContent() : null,
+        );
     }
 
     /**
@@ -223,7 +245,7 @@ export default class UserList extends RgReactBaseComponent<UserListProps, UserLi
             changeStateObject,
             () => this.updateContent(),
         );
-    }
+    };
 
     render(): false | JSX.Element {
         return (userListTemplate(this));

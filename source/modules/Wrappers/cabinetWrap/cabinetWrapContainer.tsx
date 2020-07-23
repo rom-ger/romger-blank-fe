@@ -1,61 +1,39 @@
 import { RgReactBaseComponentInterface, RgReactBaseContainer } from '@romger/react-base-components';
+import { GlobalStore } from '@romger/react-global-module/lib/store';
 import { RgReactTooltip } from '@romger/react-tooltip';
 import { inject, observer } from 'mobx-react';
 import * as React from 'react';
 import * as authActions from '../../Auth/actions/authActions';
 import { AuthService } from '../../Auth/services/authServices';
+import { IItemMenu } from '../../Global/interfaces/IItemMenu';
 import cabinetWrapTemplate from './cabinetWrapTemplate';
 
 interface CabinetWrapProps {
     children: any;
     location?: any;
-}
-
-interface NotifyInterface {
-    value: number;
-    show: true;
-}
-
-export interface ItemMenuInterface {
-    flex?: boolean;
-    title?: string;
-    icon?: string;
-    state?: string;
-    childState?: string;
-    selected?: boolean;
-    tooltip?: string;
-    simpleVisible?: boolean;
-    isIconSVG?: boolean;
-    notAutoGoToChild?: boolean;
-    subTitle?: boolean;
-    mainTitle?: boolean;
-    isAddMenu?: boolean;
-    child?: ItemMenuInterface[];
-    customHTML?: JSX.Element;
-    customHTMLCallback?: (props: CabinetWrapProps) => JSX.Element;
-    showNotifyCircle?: boolean;
-    notifyCountValue?: number;
-    onClick?: () => any;
-    notifyInfoCallback?: () => Promise<NotifyInterface>;
-    hide?: boolean;
-    isSeparateLine?: boolean;
-    concat?(...items: Array<ConcatArray<ItemMenuInterface>>): ItemMenuInterface[];
+    globalStore: GlobalStore;
 }
 
 interface CabinetWrapState {
-    items: ItemMenuInterface[];
+    items: IItemMenu[];
 }
 
 export interface CabinetWrapInterface extends RgReactBaseComponentInterface {
     state: CabinetWrapState;
     props: CabinetWrapProps;
     isOpenChildMenu: boolean;
-    openChildMenuItems: ItemMenuInterface[] | undefined;
+    openChildMenuItems: IItemMenu[] | undefined;
+
     initItems(clearAll?: boolean, chatUpdateTime?: number | null): void;
+
     goToMain(): void;
+
     handlerClickMainItem(index: number): void;
+
     handlerClickChildItem(index: number): void;
+
     isFullWidthState(): boolean;
+
     wrapTooltip(content: JSX.Element, tooltip?: string | null): JSX.Element;
 }
 
@@ -76,11 +54,11 @@ export class CabinetWrap extends RgReactBaseContainer<CabinetWrapProps, CabinetW
             .length;
     }
 
-    get openChildMenuItems(): ItemMenuInterface[] {
+    get openChildMenuItems(): IItemMenu[] {
         if (!this.isOpenChildMenu) {
             return [];
         }
-        let selectedMainItem: ItemMenuInterface | undefined | null = Object.values(this.state.items)
+        let selectedMainItem: IItemMenu | undefined | null = Object.values(this.state.items)
             .filter(item => !!item.selected)[0];
         return !!selectedMainItem && selectedMainItem.child
             ? selectedMainItem.child
@@ -113,7 +91,7 @@ export class CabinetWrap extends RgReactBaseContainer<CabinetWrapProps, CabinetW
     initItems(clearAll: boolean = false): void {
         let array = [
             {
-                icon: 'outline-group-24px',
+                iconPath: 'assets/images/svg/outline-group-24px.svg',
                 isIconSVG: true,
                 title: 'Пользователи',
                 isSetting: true,
@@ -153,12 +131,12 @@ export class CabinetWrap extends RgReactBaseContainer<CabinetWrapProps, CabinetW
     /**
      * Обновить выбраные пункты
      */
-    updateSelectable(clearAll: boolean = false, callback?: (() => any) | null, items: ItemMenuInterface[] = this.state.items) {
+    updateSelectable(clearAll: boolean = false, callback?: (() => any) | null, items: IItemMenu[] = this.state.items) {
         this.setState(
             {
                 items: items
                     .filter(item => !item.hide)
-                    .map((item: ItemMenuInterface) => {
+                    .map((item: IItemMenu) => {
                         item.selected = clearAll
                             ? false
                             : this.addConditionForSelect(item);
@@ -183,9 +161,9 @@ export class CabinetWrap extends RgReactBaseContainer<CabinetWrapProps, CabinetW
      * Дополнительные условия для выделения пункта меню
      * @param {*} item
      */
-    addConditionForSelect(item: ItemMenuInterface): boolean {
+    addConditionForSelect(item: IItemMenu): boolean {
         let find = false;
-        if (!item || !!item.subTitle || !!item.mainTitle) {
+        if (!item) {
             return find;
         }
         if (!item.state) {

@@ -1,22 +1,25 @@
+$select-check: #0277bd;
+$silver-gray: #a0adc2;
+
 body {
-  .rg-dictionary-select {
+  .ws-dictionary-select {
     margin-bottom: 24px;
   }
 
-  .rg-dictionary-select__model-single-item {
+  .ws-dictionary-select__model-single-item {
     height: 40px;
     padding: 0 14px;
     border: $default-border;
     background: none;
-    color: $primary;
+    color: $bs750;
   }
 
-  .rg-dictionary-select .select-icon {
-    color: $primary !important;
-    fill: $primary !important;
+  .ws-dictionary-select .select-icon {
+    fill: $bs750 !important;
+    color: $bs750 !important;
   }
 
-  .rg-dictionary-select__label {
+  .ws-dictionary-select__label {
     min-height: 20px;
     margin-bottom: 5px;
     padding-left: 14px;
@@ -28,27 +31,27 @@ body {
       margin-bottom: 0;
       padding-left: 0;
     }
-  }  
+  }
 
-  .rg-dictionary-select__model-item {
+  .ws-dictionary-select__model-item {
     height: 24px;
     padding: 0 6px;
     background: $select-check;
   }
 
-  .rg-dictionary-select__items-item--hover, 
-  .rg-dictionary-select__items-item:hover {
-    background: $hover-bg !important;
-    color: $primary !important;
+  .ws-dictionary-select__items-item--hover,
+  .ws-dictionary-select__items-item:hover {
+    background: $bs020 !important;
+    color: $bs750 !important;
   }
 
-  .rg-dictionary-select__items-item--selected {
+  .ws-dictionary-select__items-item--selected {
     background: $select-check !important;
-    color: $white !important;
+    color: $bs000 !important;
 
     &:hover {
       background: $select-check !important;
-      color: $white !important;
+      color: $bs000 !important;
     }
   }
 }

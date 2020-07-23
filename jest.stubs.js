@@ -1,20 +1,23 @@
 // Global/Window object Stubs for Jest
 window.matchMedia = window.matchMedia || function () {
     return {
-      matches: false,
-      addListener: function () { },
-      removeListener: function () { },
+        matches: false,
+        addListener: function () {
+        },
+        removeListener: function () {
+        },
     };
-  };
-  
-  window.requestAnimationFrame = function (callback) {
+};
+
+window.requestAnimationFrame = function (callback) {
     setTimeout(callback);
-  };
-  
-  window.localStorage = {
-    getItem: function () { },
-    setItem: function () { },
-  };
-  
-  Object.values = () => [];
-  
+};
+
+window.localStorage = {
+    getItem: function () {
+    },
+    setItem: function () {
+    },
+};
+
+Object.values = () => [];

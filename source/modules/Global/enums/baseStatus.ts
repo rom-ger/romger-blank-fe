@@ -1,4 +1,4 @@
-import { SimpleObjectInterface } from '../interfaces/simpleObject';
+import { SimpleObjectInterface } from '@romger/react-global-module/lib/interfaces';
 import { TypeService } from '../services/typeService';
 
 export enum BaseStatusEnum {
@@ -8,6 +8,7 @@ export enum BaseStatusEnum {
 
 export interface BaseStatusInterface {
     [value: string]: SimpleObjectInterface;
+
     ACTIVE: SimpleObjectInterface;
     DELETED: SimpleObjectInterface;
 }

@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   overflow-y: auto;
-  background: $blue;
+  background: $de500;
   -webkit-overflow-scrolling: touch;
 
   &__content {
@@ -21,7 +21,7 @@
   &__card {
     padding: 48px;
     border-radius: 3px;
-    background-color: $white;
+    background-color: $bs000;
 
     &--sign-in {
       width: 400px;
@@ -40,7 +40,7 @@
 
   &__error {
     margin: 0 0 9px;
-    color: $warning !important;
+    color: $ru500 !important;
   }
 
   &__action {
@@ -48,7 +48,7 @@
     height: 44px;
     margin-bottom: 40px;
     border-radius: 6px;
-    background: $link-color;
+    background: $de500;
     cursor: pointer;
 
     &--secondary {
@@ -59,7 +59,7 @@
     }
 
     &--disabled {
-      background: $label-color;
+      background: $bc090;
       cursor: default;
     }
 
@@ -99,7 +99,7 @@
 
     &--link-color {
       margin-left: 0;
-      color: $link-color;
+      color: $de500;
     }
   }
 }

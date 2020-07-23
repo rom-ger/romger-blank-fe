@@ -1,4 +1,4 @@
-import { SimpleObjectInterface } from '../../Global/interfaces/simpleObject';
+import { SimpleObjectInterface } from '@romger/react-global-module/lib/interfaces';
 import { TypeService } from '../../Global/services/typeService';
 
 export enum UserRoleEnum {
@@ -10,6 +10,7 @@ export enum UserRoleEnum {
 
 export interface UserRoleInterface {
     [value: string]: SimpleObjectInterface;
+
     ADMIN: SimpleObjectInterface;
     USER: SimpleObjectInterface;
     OPERATOR: SimpleObjectInterface;

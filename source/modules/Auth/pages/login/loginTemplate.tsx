@@ -30,7 +30,7 @@ const loginTemplate = (context: LoginPageInterface): JSX.Element => {
                         <h1
                             className={classnames(
                                 'auth-wrap__card-title',
-                                'subheader-2--primary',
+                                'ws-subheader-2-primary',
                             )}
                         >
                             Вход
@@ -63,7 +63,7 @@ const loginTemplate = (context: LoginPageInterface): JSX.Element => {
                             row="ctr"
                             className={classnames(
                                 'auth-wrap__action',
-                                'label-4--white',
+                                'ws-action-1-white',
                                 {
                                     'auth-wrap__action--disabled': !context.loginIsValid(),
                                 },

@@ -1,6 +1,6 @@
+import { SimpleObjectInterface } from '@romger/react-global-module/lib/interfaces';
 import * as t from 'io-ts';
 import * as moment from 'moment';
-import { SimpleObjectInterface } from '../../Global/interfaces/simpleObject';
 import { USER_ROLE, UserRoleEnumType } from '../enums/userRole';
 
 export const UserType = t.interface({
@@ -16,7 +16,8 @@ export const UserType = t.interface({
     roles: t.array(UserRoleEnumType),
 });
 
-export interface IUserDTO extends t.TypeOf<typeof UserType> {}
+export interface IUserDTO extends t.TypeOf<typeof UserType> {
+}
 
 class User {
     id: string;
@@ -39,7 +40,7 @@ class User {
         this.enabled = params.enabled;
         this.email = params.email;
         this.createDate = params.createDate ? moment(params.createDate)
-                                                    .toDate() : null;
+            .toDate() : null;
         this.phone = params.phone ? params.phone : null;
         this.roles = params.roles && params.roles.length ? params.roles.map((el: string) => USER_ROLE[el]) : [USER_ROLE.USER];
     }

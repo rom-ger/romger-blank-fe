@@ -100,9 +100,9 @@ const userEditTemplate = (context: IUserEditPage) => (
         <FlexBox
             row="center center"
             className={classnames(
-                'rg-action',
+                'ws-action',
                 {
-                    'rg-action--disabled': !context.isValidForm(),
+                    'ws-action--disabled': !context.isValidForm(),
                 },
             )}
             onClick={() => context.isValidForm() ? context.updateAction() : null}

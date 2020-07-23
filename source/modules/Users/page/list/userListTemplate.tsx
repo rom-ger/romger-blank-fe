@@ -5,11 +5,11 @@ import { FilterTypeEnum } from '@romger/react-table/lib/enums';
 import classnames from 'classnames';
 import * as React from 'react';
 import ReactSVG from 'react-svg';
-import BreadCrumbs from '../../../Global/components/breadCrumbs/breadCrumbsComponent';
 import USER_FIELD_NAME from '../../enums/userFieldName';
 import { USER_ROLE } from '../../enums/userRole';
 import { USER_STATUS } from '../../enums/userStatus';
 import { IUserList } from './userListComponent';
+import { BreadCrumbs } from '@romger/react-global-module/lib/components';
 
 const userListTemplate = (context: IUserList) => (
     <FlexBox
@@ -20,6 +20,7 @@ const userListTemplate = (context: IUserList) => (
     >
         <BreadCrumbs
             items={context.state.breadCrumbs}
+            globalStore={context.props.globalStore}
         />
         <FlexBox
             shrink="0"

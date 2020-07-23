@@ -1,27 +1,29 @@
 body {
-  .rg-react-base-modal {
-    @extend %body-2--primary;
+  .ws-react-base-modal {
+    @extend %ws-body-2;
+
+    color: $bs750;
 
     .dictionary-list__button {
       margin: 0;
     }
 
-    .rg-react-checkbox--title {
+    .ws-react-checkbox--title {
       margin-left: 15px;
     }
   }
-    
-  .rg-react-base-modal__modal {
+
+  .ws-react-base-modal__modal {
     border-radius: 4px;
   }
 
-  .rg-react-base-modal__modal-title {
+  .ws-react-base-modal__modal-title {
     align-items: flex-start !important;
     height: auto;
     min-height: 83px;
     padding: 24px;
-    background: $white;
-    color: $primary;
+    background: $bs000;
+    color: $bs750;
     font-size: 25px;
 
     .modal-icon {
@@ -29,43 +31,44 @@ body {
       min-width: 26px !important;
       height: 26px !important;
       min-height: 26px !important;
-      color: $primary !important;
-      fill: $primary !important;
+      fill: $bs750 !important;
+      color: $bs750 !important;
     }
   }
 
-  .rg-react-base-modal__content-wrap {
+  .ws-react-base-modal__content-wrap {
     padding: 0 24px;
   }
 
-  .rg-react-base-modal__input-label {
+  .ws-react-base-modal__input-label {
     flex-shrink: 0;
     min-width: 120px;
     padding: 8px 14px 0 0;
   }
 
-  .rg-react-base-modal__single-input-wrapper {
+  .ws-react-base-modal__single-input-wrapper {
     margin-bottom: 24px;
     padding-left: 120px;
   }
 
-  .rg-react-base-modal__button-wrap {
+  .ws-react-base-modal__button-wrap {
     justify-content: space-between !important;
     height: 72px;
     min-height: 72px;
     padding: 0 24px;
     border: 0;
-    background-color: $thin-gray;
+    background-color: $bs020;
   }
 
-  .rg-react-base-modal__button {
-    @extend %label-4;
+  .ws-react-base-modal__button {
+    @extend %ws-action-1;
+
     height: 36px;
     min-height: 36px;
     margin: 0;
     padding: 0 20px;
-    background-color: $link;
-    color: $white;
+    background-color: $de500;
+    color: $bs000;
     line-height: 36px;
 
     &:last-of-type {
@@ -73,14 +76,14 @@ body {
     }
   }
 
-  .rg-react-base-modal__button.rg-react-base-modal__button--default {
+  .ws-react-base-modal__button.ws-react-base-modal__button--default {
     padding: 0;
-    background-color: $thin-gray;
-    color: $link;
+    background-color: $bs020;
+    color: $de500;
   }
 
-  .rg-react-base-modal__button--disabled {
-    background-color: $thin-gray;
-    color: $primary;
+  .ws-react-base-modal__button--disabled {
+    background-color: $bs020;
+    color: $bs750;
   }
 }

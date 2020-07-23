@@ -124,9 +124,9 @@ const userCreateTemplate = function (this: IUserCreatePage): JSX.Element {
             <FlexBox
                 row="center center"
                 className={classnames(
-                    'rg-action',
+                    'ws-action',
                     {
-                        'rg-action--disabled': !this.isValidForm(),
+                        'ws-action--disabled': !this.isValidForm(),
                     },
                 )}
                 onClick={() => this.isValidForm() ? this.updateAction() : null}

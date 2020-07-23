@@ -18,7 +18,8 @@
         "function-name": false,
         "prefer-array-literal": false,
         "no-increment-decrement": false,
-        "ws-jsx-alignment": [true]
+        "ws-jsx-alignment": [true],
+        "semicolon": false
     },
     "rulesDirectory": []
 }

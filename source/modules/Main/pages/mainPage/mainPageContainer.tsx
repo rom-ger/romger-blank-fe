@@ -14,8 +14,6 @@ export interface MainPageState {
 export interface MainPageInterface extends RgReactBaseComponentInterface {
     state: MainPageState;
     props: MainPageProps;
-    getUserName: () => any;
-    componentDidMount: () => any;
 }
 
 export class MainPage extends RgReactBaseComponent<MainPageProps, MainPageState>
