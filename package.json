@@ -34,7 +34,7 @@
     "@romger/react-table": "1.0.1",
     "@romger/react-tooltip": "1.0.0",
     "@types/lodash.isequal": "4.5.5",
-    "axios": "0.19.2",
+    "axios": "0.21.1",
     "babel-cli": "6.26.0",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
