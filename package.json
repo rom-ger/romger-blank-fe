@@ -35,7 +35,7 @@
     "@romger/react-tooltip": "1.0.0",
     "@types/lodash.isequal": "4.5.5",
     "@types/seamless-immutable": "^7.1.16",
-    "axios": "0.19.2",
+    "axios": "0.21.2",
     "babel-cli": "6.26.0",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
