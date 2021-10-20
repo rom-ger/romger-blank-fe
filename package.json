@@ -86,7 +86,12 @@
     "react-toastify": "4.5.2",
     "react-tooltip": "3.11.1",
     "redux": "^4.1.1",
+    "redux-observable": "1.2.0",
     "redux-seamless-immutable": "0.4.0",
+    "reselect": "3.0.1",
+    "reselector": "^0.17.0",
+    "rxjs": "6.6.7",
+    "rxjs-compat": "6.2.2",
     "sanitize.css": "8.0.1",
     "seamless-immutable": "^7.1.4",
     "ts-loader": "8.0.1",
@@ -102,11 +107,7 @@
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0",
     "ws-tslint-react": "0.0.9",
-    "yargs": "11.1.1",
-    "reselect": "3.0.1",
-    "reselector": "^0.17.0",
-    "rxjs": "^6.5.4",
-    "rxjs-compat": "6.2.2"
+    "yargs": "11.1.1"
   },
   "devDependencies": {
     "@types/classnames": "2.2.10",

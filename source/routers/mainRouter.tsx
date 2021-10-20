@@ -19,7 +19,7 @@ export default class MainRouter extends React.Component<{
     render() {
         return (
             <ReduxProvider
-                store={reducerStore}
+                store={reducerStore()}
             >
                 <Provider
                     {...stores}

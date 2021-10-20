@@ -1,12 +1,22 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
 import rootReducer from './reducers/rootReducer';
+import { rootEpic } from './epics/rootEpic';
 
-const store = createStore(
-    rootReducer,
-    {
-        reducer1: {},
-        reducer2: {},
-    },
-);
+const epicMiddleware = createEpicMiddleware();
 
-export default store;
+export default function configureStore() {
+    const store = createStore(
+        rootReducer,
+        {
+            reducer1: {},
+            reducer2: {},
+        },
+        applyMiddleware(epicMiddleware),
+    );
+
+    // @ts-expect-error
+    epicMiddleware.run(rootEpic);
+
+    return store;
+}
