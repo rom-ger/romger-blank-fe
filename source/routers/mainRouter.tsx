@@ -19,7 +19,7 @@ export default class MainRouter extends React.Component<{
     render() {
         return (
             <ReduxProvider
-                store={reducerStore()}
+                store={reducerStore().store}
             >
                 <Provider
                     {...stores}
@@ -39,8 +39,7 @@ export default class MainRouter extends React.Component<{
                                             exact={true}
                                             path="/login"
                                             component={(props: any) => <DynamicImport
-                                                // load={() => import('../modules/Auth/pages/login/loginContainer')}
-                                                load={() => import('../modules/Main/pages/temp/temp')}
+                                                load={() => import('../modules/Auth/pages/login/loginContainer')}
                                                 propsParent={props}
                                             />}
                                         />

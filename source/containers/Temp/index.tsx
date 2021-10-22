@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect, useSelector } from 'react-redux';
-import useActions from '../../../../hooks/useActions';
-import { action_1_1 } from '../../../../store/actions/action_1';
-import { getValue11, getValue12 } from '../../../../store/selectors/selector1';
-import reducer1 from '../../../../store/reducers/reducer_1';
+import useActions from '../../hooks/useActions';
+import { action_1_1 } from '../../store/actions/action_1';
+import { getValue11, getValue12 } from '../../store/selectors/selector1';
+import reducer1 from '../../store/reducers/reducer_1';
 
 const Temp = () => {
     const actions = useActions({ action_1_1 });
