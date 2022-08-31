@@ -73,7 +73,7 @@
     "mobx": "4.14.0",
     "mobx-react": "6.2.2",
     "moment": "2.27.0",
-    "moment-timezone": "0.5.31",
+    "moment-timezone": "0.5.35",
     "qs": "6.9.4",
     "query-string": "6.13.1",
     "rc-datepicker": "5.0.16",
